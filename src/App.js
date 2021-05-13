@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import Header from "../my-app/src/Header";
 import "./styles.css";
 import WeatherColumn from "./WeatherColumn";
 
