@@ -1,10 +1,10 @@
-
+import Weather from "./Weather";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      Weather App
+     <Weather />
       <footer>
         Project created by Kiera Bonaparte
         <br />
