@@ -1,7 +1,26 @@
 .Weather {
-  color: indianred;
-  list-style: none;
   border: solid 1px rgb(172, 164, 164);
   padding-top: 25px;
   margin-top: 50px;
+  max-width: 75%;
+  margin: 0 auto;
+}
+.form-control {
+  max-width: 50%;
+  margin: 0 auto;
+}
+.search {
+  display: block;
+  margin: 0 auto;
+  float: left;
+}
+#list {
+  list-style: none;
+  color: rgba(150, 146, 146, 0.808);
+}
+#details {
+  list-style: none;
+}
+#temp {
+  font-size: 40px;
 }
