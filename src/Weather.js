@@ -1,17 +1,18 @@
 import React from "react";
 import "./Weather.css";
+import WeeklyForecast from "./WeeklyForecast";
 
 export default function Weather(){
     return(
         <div className="Weather">
-            <form className="form-inline">
+            <form className="form d-inline">
             <div className="row">
-                <div className="col-9">
+                <div className="col-10">
             
                 <input type="search" placeholder="Enter a city" autoComplete="off"className="form-control" /> 
                 </div>
                 <div className="col">
-                <input type="submit" value="Search" className="btn btn-primary search" />
+                <input type="submit" value="Search" className="btn btn-primary search float-left" />
            
             </div> </div>  </form>
             <br />
@@ -35,6 +36,7 @@ export default function Weather(){
                 </ul>
             </div>
             </div>
+            <WeeklyForecast />
         </div>
     );
 }

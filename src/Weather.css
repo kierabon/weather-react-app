@@ -1,5 +1,6 @@
 .Weather {
   border: solid 1px rgb(172, 164, 164);
+  border-radius: 15px;
   padding-top: 25px;
   margin-top: 50px;
   max-width: 75%;
@@ -10,7 +11,7 @@
   margin: 0 auto;
 }
 .search {
-  display: block;
+  display: inline;
   margin: 0 auto;
   float: left;
 }
