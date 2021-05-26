@@ -25,7 +25,7 @@ export default function WeeklyForecast(){
                 </div>
                 <div className="col btn">
                     <div className="row day">Wednesday</div>
-                    <div className="row"> img </div>
+                    <div className="row"> <img alt="Mostly cloudy" src="//ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" ></img> </div>
                     <div className="row d-inline">
                         <span className="temp">78</span>
                     <sup>    <span className="units"><a href="/">F</a> | <a href="/">C</a></span></sup>

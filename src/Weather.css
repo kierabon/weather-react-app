@@ -9,15 +9,26 @@
 
 #list {
   list-style: none;
-  color: rgba(150, 146, 146, 0.808);
+
+  color: #70757a;
+  font-size: 16px;
+  line-height: 20px;
 }
 #details {
   list-style: none;
+  color: #70757a;
 }
-#temp {
+#temperature {
   font-size: 40px;
 }
-form {
-  display: block;
+#city {
+  max-width: 50%;
   margin: 0 auto;
+  display: block;
+}
+#location {
+  margin: 20px;
+}
+#sub {
+  margin: 10px;
 }
