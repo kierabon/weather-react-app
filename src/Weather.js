@@ -1,20 +1,20 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 import WeeklyForecast from "./WeeklyForecast";
 
 export default function Weather(){
+    
+    const apiKey= "39a4dba5764c859c9c8cade7545d15da";
+    let apiURL=`api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`; 
     return(
         <div className="Weather">
-            <form className="form d-inline">
-            <div className="row">
-                <div className="col-10">
-            
-                <input type="search" placeholder="Enter a city" autoComplete="off"className="form-control" /> 
-                </div>
-                <div className="col">
-                <input type="submit" value="Search" className="btn btn-primary search float-left" />
-           
-            </div> </div>  </form>
+            <form className="form-row align-items-center">
+    <div class="col-6">
+                <input type="search" placeholder="Enter a city" className="form-control" /> 
+                <input type="submit" value="Search" className="btn btn-primary" />
+            </div>
+            </form>
             <br />
             <h1>
             New York, NY
