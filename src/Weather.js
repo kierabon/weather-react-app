@@ -52,7 +52,7 @@ export default function Weather(props){
             wind:response.data.wind.speed,
             description:response.data.weather[0].description,
             humidity:response.data.main.humidity,
-            iconUrl:"//ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+            iconUrl:`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
             country:response.data.sys.country,
             date: new Date(response.data.dt*1000),
             percipitation:response.data.main.daily,
