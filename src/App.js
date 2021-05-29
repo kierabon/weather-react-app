@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <Weather />
+     <Weather city="Sydney" />
       <footer>
         Project created by Kiera Bonaparte
         <br />
