@@ -39,7 +39,7 @@ export default function Weather(props){
   
     function search(){
         const apiKey= "39a4dba5764c859c9c8cade7545d15da";
-        let apiUrl=`https://api.openweathermap.org/data/2.5/weather/?q=${city}&exclude=hourly,daily&appid=${apiKey}&units=imperial`; 
+        let apiUrl=`https://api.openweathermap.org/data/2.5/weather/?q=${city}&exclude=hourly,daily&appid=${apiKey}&units=metric`; 
     axios.get(apiUrl).then(handleResponse); 
     }
     function handleResponse(response){

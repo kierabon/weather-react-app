@@ -1,3 +1,6 @@
 .units {
   font-size: 12px;
 }
+#temperature {
+  display: inline;
+}
