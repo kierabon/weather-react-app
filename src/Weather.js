@@ -1,7 +1,6 @@
 import React ,{ useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import WeeklyForecast from "./WeeklyForecast";
 import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props){
@@ -85,7 +84,7 @@ export default function Weather(props){
             
             
             <WeatherInfo data={weatherData} />
-            <WeeklyForecast latitude={weatherData.lat} longitude={weatherData.lon} />
+             
         </div>
     );}
     else{
