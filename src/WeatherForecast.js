@@ -7,8 +7,13 @@ export default function WeatherForcast(props){
 let [loaded, setLoaded]=useState(false);
 let [forecast, setForecast]=useState(null);
      const apiKey= "39a4dba5764c859c9c8cade7545d15da";
+    
+    let latitude= (props.data.lat);
+     let longitude= (props.data.lon);
+     let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+
      function handleResponse(response){
-         console.log(response.data);
          setForecast(response.data.daily,);
          setLoaded(true);
          
@@ -16,14 +21,21 @@ let [forecast, setForecast]=useState(null);
      
      if(loaded){
          return(
-          <div className="WeatherForecast">
-            <WeatherForecastDay data={forecast[0]} />
-
-        </div>
-      );   
+            <div className="WeatherForecast">
+              <div className="row">
+           {forecast.map(function(dailyForecast, index){
+             if(index < 6){
+             return( 
+               <div className="col" key={index}>
+                 
+                 <WeatherForecastDay data={dailyForecast} />
+               </div>);}
+           }) 
+          }   </div>
+      </div>
+      );
      } else {
-                 let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${props.data.lat}&lon=${props.data.lon}&exclude=hourly&appid=${apiKey}&units=imperial`;
-                 axios.get(apiUrl).then(handleResponse);
+                 
         return null;
      }
 

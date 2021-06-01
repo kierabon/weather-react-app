@@ -10,6 +10,7 @@ export default function Weather(props){
     const [lat, setLat] = useState(null);
     const [lon, setLng] = useState(null);
     const [status, setStatus] = useState(null);
+    const apiKey= "39a4dba5764c859c9c8cade7545d15da";
 
     function handleSubmit(event){
         event.preventDefault();
@@ -31,20 +32,17 @@ export default function Weather(props){
       }, () => {
         setStatus('Unable to retrieve your location');
       })
-       const apiKey= "39a4dba5764c859c9c8cade7545d15da";
+     
          let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
          axios.get(url).then(handleResponse);
     }
    }
   
     function search(){
-        const apiKey= "39a4dba5764c859c9c8cade7545d15da";
         let apiUrl=`https://api.openweathermap.org/data/2.5/weather/?q=${city}&exclude=hourly,daily&appid=${apiKey}&units=metric`; 
     axios.get(apiUrl).then(handleResponse); 
     }
-    function handleResponse(response){
-        console.log(response.data);
-           
+    function handleResponse(response){ 
         setWeatherData({
             ready:true,
             cityName:response.data.name,
@@ -79,11 +77,6 @@ export default function Weather(props){
                 onClick={getLocation} /> {status}
             </form>
             <br />
-            
-            
-            
-            
-            
             <WeatherInfo data={weatherData} />
              <WeatherForecast data={weatherData} />
         </div>
