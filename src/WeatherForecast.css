@@ -1,0 +1,10 @@
+WeatherForecast {
+  text-align: center;
+}
+.dayTemp-min {
+  opacity: 70%;
+  margin-left: 10px;
+}
+.icon {
+  size: 300px;
+}
