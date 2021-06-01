@@ -10,8 +10,7 @@ let [forecast, setForecast]=useState(null);
     
     let latitude= (props.data.lat);
      let longitude= (props.data.lon);
-     let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
+    
 
      function handleResponse(response){
          setForecast(response.data.daily,);
@@ -35,7 +34,9 @@ let [forecast, setForecast]=useState(null);
       </div>
       );
      } else {
-                 
+            
+       let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
         return null;
      }
 
