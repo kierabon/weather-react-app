@@ -2,13 +2,9 @@ WeatherForecast {
   text-align: center;
 }
 .dayTemp-min {
-  opacity: 70%;
+  opacity: 80%;
   margin-left: 10px;
 }
 .icon {
   size: 300px;
-}
-#forecast {
-  padding-left: 50px;
-  margin-left: 50px;
 }
