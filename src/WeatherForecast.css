@@ -8,3 +8,7 @@ WeatherForecast {
 .icon {
   size: 300px;
 }
+#forecast {
+  padding-left: 50px;
+  margin-left: 50px;
+}
